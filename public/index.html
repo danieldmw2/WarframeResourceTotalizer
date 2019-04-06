@@ -13,12 +13,73 @@ http://www.templatemo.com/tm-489-strategy
     <!-- load stylesheets -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">  <!-- Google web font "Open Sans" -->
     <link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.min.css">                <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/fontello/css/warframe-codes.css">                        <!-- Fontello -->
     <link rel="stylesheet" href="css/bootstrap.min.css">                                      <!-- Bootstrap style -->
     <link rel="stylesheet" href="css/hero-slider-style.css">                                  <!-- Hero slider style -->
     <link rel="stylesheet" href="css/templatemo-style.css">                                   <!-- Templatemo style -->
 
     <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/css/bootstrap4-toggle.min.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet">
+
+
+    <style>
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            width: 40%;
+        }
+
+        @font-face
+        {
+            font-family: 'warframe';
+            src: url('./css/fontello/font/warframe.eot?85949734');
+            src: url('./css/fontello/font/warframe.eot?85949734#iefix') format('embedded-opentype'),
+            url('./css/fontello/font/warframe.woff?85949734') format('woff'),
+            url('./css/fontello/font/warframe.ttf?85949734') format('truetype'),
+            url('./css/fontello/font/warframe.svg?85949734#warframe') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .icon
+        {
+            font-family: "warframe";
+            font-style: normal;
+            font-weight: normal;
+            speak: none;
+
+            display: inline-block;
+            text-decoration: inherit;
+            width: 1em;
+            margin-right: .2em;
+            text-align: center;
+            /* opacity: .8; */
+
+            /* For safety - reset parent styles, that can break glyph codes*/
+            font-variant: normal;
+            text-transform: none;
+
+            /* fix buttons height, for twitter bootstrap */
+            line-height: 1em;
+
+            /* Animation center compensation - margins should be symmetric */
+            /* remove if not needed */
+            margin-left: .2em;
+
+            /* You can be more comfortable with increased icons size */
+            /* font-size: 120%; */
+
+            /* Font smoothing. That was taken from TWBS */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+
+            /* Uncomment for 3D effect */
+            /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+        }
+    </style>
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -39,7 +100,8 @@ http://www.templatemo.com/tm-489-strategy
                 <li class="selected">
                     <div class="cd-full-width">
                         <div class="tm-slide-content-div">
-                            <i class="fa fa-cogs tm-slide-icon"></i>
+                            <!--<i class="icon icon-fo-warframe tm-slide-icon"></i>-->
+                            <img src="img/icon.png" class="center">
                             <h2 class="text-uppercase">Warframe</h2>
                             <p class="m-b-mid">Resources Totalizer</p>
 
@@ -139,7 +201,8 @@ http://www.templatemo.com/tm-489-strategy
                 <div class="row">
                     <div class="col-xs-12 tm-text-white text-xs-center">
                         <h2 class="tm-section-3-title">Contact Me</h2>
-                        <p class="tm-section-3-description">If you want to know more about this tool or you have any suggestion we are here to answer your questions</p>
+                        <p class="tm-section-3-description">If you want to know more about this tool or you have any suggestion
+                            we are here to answer your questions. Write to us and we will get back to you as soon as possible</p>
                     </div>
                 </div>
                 <div class="row">
