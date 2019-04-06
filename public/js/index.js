@@ -2,6 +2,12 @@ $(function () {
     $('#answerTable').DataTable();
     $('#totalTable').DataTable();
 
+    $('[data-toggle="popover"]').popover();
+
+    $('.popover-dismiss').popover({
+        trigger: 'focus'
+    })
+
     $('#type').on('change', function () {
         if($(this).val() === 'Wea')
             $('#firstFormBtn').html('Search');
@@ -153,9 +159,15 @@ function loadTables(requestData) {
             research = requestData.research[key];
 
         if (total === (build + research)) {
+            var link, keyArray = key.split(" ");
+            if(ignoreParts.includes(keyArray.pop()))
+                link = '<a target="_blank" href="https://warframe.fandom.com/wiki/'+ keyArray.join(" ").replace(" ", "_") +'">' + key + '</a>';
+            else
+                link = '<a target="_blank" href="https://warframe.fandom.com/wiki/'+ key.replace(" ", "_") +'">' + key + '</a>';
+
             var row =
                 '<tr>' +
-                '<td>' + key + '</td>' +
+                '<td>' + link + '</td>' +
                 '<td>' + build.format(0, 3) + '</td>' +
                 '<td>' + research.format(0, 3) + '</td>' +
                 '<td>' + total.format(0, 3) + '</td>' +
@@ -179,9 +191,15 @@ function loadTables(requestData) {
             researchTotal = resourcesResearch[keyTotal];
 
         if (total === (build + research)) {
+            var linkTotal, keyTotalArray = keyTotal.split(" ");
+            if(ignoreParts.includes(keyTotalArray.pop()))
+                linkTotal = '<a target="_blank" href="https://warframe.fandom.com/wiki/'+ keyTotalArray.join(" ").replace(" ", "_") +'">' + keyTotal + '</a>';
+            else
+                linkTotal = '<a target="_blank" href="https://warframe.fandom.com/wiki/'+ keyTotal.replace(" ", "_") +'">' + keyTotal + '</a>';
+
             var rowTotal =
                 '<tr>' +
-                    '<td>' + keyTotal + '</td>' +
+                    '<td>' + linkTotal + '</td>' +
                     '<td>' + buildTotal.format(0, 3) + '</td>' +
                     '<td>' + researchTotal.format(0, 3) + '</td>' +
                     '<td>' + totalTotal.format(0, 3) + '</td>' +
@@ -205,6 +223,16 @@ function loadTables(requestData) {
 
     $firstBtn.removeAttr('disabled');
     $secondBtn.removeAttr('disabled');
+
+    $('#lastSearch').html("(" + requestData.params.url +")");
+    previousSearches.push({"type": requestData.params.type === 'Wea' ? 'Weapon/Sentinel' : 'Warframe/Archwing', "url": requestData.params.url});
+
+    var content = '';
+    for(var search in previousSearches) {
+        content += (previousSearches[search].type + ", " + previousSearches[search].url + "\n");
+    }
+
+    $('#previousSearches').attr('data-content', content);
 }
 
 var resourcesTotal = [], resourcesBuild = [], resourcesResearch = [];
@@ -229,3 +257,6 @@ Number.prototype.format = function (n, x) {
     var re = '\\d(?=(\\d{' + (x || 3) + '})+' + (n > 0 ? '\\.' : '$') + ')';
     return this.toFixed(Math.max(0, ~~n)).replace(new RegExp(re, 'g'), '$&,');
 };
+
+var ignoreParts = ['Chassis', 'Systems', 'Neuroptics', 'Wings', 'Harness', 'Stock', 'Receiver', 'Barrel', 'Upper Limb', 'Lower Limb', 'Grip', 'String', 'Blade', 'Handle', 'Stars', 'Pouch'];
+var previousSearches = [];

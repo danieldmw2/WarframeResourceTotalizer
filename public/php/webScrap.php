@@ -193,7 +193,7 @@ try {
         }
     }
 
-    echo json_encode(array('success' => 1, 'total' => $totalResources, 'build' => $resorcesArray, 'research' => $resorcesArrayResearch));
+    echo json_encode(array('success' => 1,  'params' => $_POST, 'total' => $totalResources, 'build' => $resorcesArray, 'research' => $resorcesArrayResearch));
 } catch (Exception $e) {
-    echo json_encode(array('success' => 0, 'msg' => $e->getMessage()));
+    echo json_encode(array('success' => 0, 'params' => $_POST, 'msg' => $e->getMessage()));
 }
