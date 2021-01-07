@@ -15,13 +15,13 @@ try {
     $context = stream_context_create($arrContextOptions);
     $html = @file_get_html($url, false, $context);
 
-    if($html === FALSE)
+    if ($html === FALSE)
         throw new Exception('Sticker Not Found');
 
     $ret = $html->find('.mdCMN09Li');
     $title = $html->find('.mdCMN38Item01Ttl', 0);
 
-    if(count($ret) == 0)
+    if (count($ret) == 0)
         throw new Exception("Sticker Images Not Found");
 
     $resorcesArray = array();
@@ -36,7 +36,7 @@ try {
     $i = 0;
     $files = $resorcesArray;
 
-    $zipname = $title->plaintext . '.zip';
+    /*$zipname = $title->plaintext . '.zip';
     $zip = new ZipArchive();
     $zip->open($zipname, ZipArchive::CREATE);
     foreach ($files as $file) {
@@ -44,9 +44,27 @@ try {
         $zip->addFromString(basename($title->plaintext . '_' . $i .'.png'),  file_get_contents($file));
     }
 
+    $zip->close();*/
+
+    $zipname = $title->plaintext . '.zip';
+    $zipname = str_replace(" ", "", $zipname);
+    $zip = new ZipArchive();
+    $zip->open($zipname, ZipArchive::CREATE);
+    foreach ($files as $link) {
+        $i++;
+
+        $linkname = $title->plaintext . '_' . $i;
+        $linkname = str_replace(" ", "", $linkname);
+
+        file_put_contents($linkname . ".png", fopen($link, 'r'));
+        $x = iconv("cp950", "UTF-8", shell_exec("apng2gif " . $linkname . ".png " . $linkname . ".gif"));
+
+        $zip->addFromString(basename($linkname . '.gif'), file_get_contents($linkname . ".gif"));
+    }
+
     $zip->close();
 
-    echo json_encode(array('success' => 1,  'params' => $_POST, 'stickers' => $resorcesArray, 'zipname' => $zipname));
+    echo json_encode(array('success' => 1, 'params' => $_POST, 'stickers' => $resorcesArray, 'zipname' => $zipname));
 } catch (Exception $e) {
     echo json_encode(array('success' => 0, 'params' => $_POST, 'msg' => $e->getMessage()));
 }
