@@ -36,30 +36,25 @@ try {
     $i = 0;
     $files = $resorcesArray;
 
-    /*$zipname = $title->plaintext . '.zip';
-    $zip = new ZipArchive();
-    $zip->open($zipname, ZipArchive::CREATE);
-    foreach ($files as $file) {
-        $i++;
-        $zip->addFromString(basename($title->plaintext . '_' . $i .'.png'),  file_get_contents($file));
-    }
-
-    $zip->close();*/
-
+    $host = gethostname();
     $zipname = $title->plaintext . '.zip';
     $zipname = str_replace(" ", "", $zipname);
     $zip = new ZipArchive();
     $zip->open($zipname, ZipArchive::CREATE);
+
     foreach ($files as $link) {
         $i++;
 
         $linkname = $title->plaintext . '_' . $i;
         $linkname = str_replace(" ", "", $linkname);
 
-        file_put_contents($linkname . ".png", fopen($link, 'r'));
-        $x = iconv("cp950", "UTF-8", shell_exec("apng2gif " . $linkname . ".png " . $linkname . ".gif"));
+        if($host == 'DESKTOP-EEV9QVH') {
+            file_put_contents($linkname . ".png", fopen($link, 'r'));
+            $x = iconv("cp950", "UTF-8", shell_exec("apng2gif " . $linkname . ".png " . $linkname . ".gif"));
 
-        $zip->addFromString(basename($linkname . '.gif'), file_get_contents($linkname . ".gif"));
+            $zip->addFromString(basename($linkname . '.gif'), file_get_contents($linkname . ".gif"));
+        } else
+            $zip->addFromString(basename($title->plaintext . '_' . $i .'.png'),  file_get_contents($link));
     }
 
     $zip->close();

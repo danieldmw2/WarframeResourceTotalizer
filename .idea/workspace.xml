@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="615c6e2f-2419-4403-ab24-b901719403db" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/oshiDownload.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/oshiDownload.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/php/Peach Cat11.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/php/webScrapOshi.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/php/webScrapOshi.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -367,7 +365,7 @@
       <workItem from="1551128677984" duration="2830000" />
       <workItem from="1554575632314" duration="11391000" />
       <workItem from="1609983956949" duration="2308000" />
-      <workItem from="1609987854557" duration="11303000" />
+      <workItem from="1609987854557" duration="13223000" />
     </task>
     <servers />
   </component>
