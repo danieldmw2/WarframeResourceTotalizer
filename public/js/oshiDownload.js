@@ -2,7 +2,7 @@ $(function () {
     $('#first-form').on('submit', function (e) {
         e.preventDefault();
 
-        if( $('#firstFormBtn').html() !== 'Searching...')
+        if( $('#firstFormBtn').html() !== 'Downloading...')
             webScrap();
     });
 });
@@ -10,13 +10,13 @@ $(function () {
 function webScrap() {
     var $firstBtn = $('#firstFormBtn');
 
-    $firstBtn.html('Searching...');
+    $firstBtn.html('Downloading...');
     $firstBtn.attr('disabled', true);
 
     appController.getOshiInfo( $('#first-form').serialize(), function (requestData, textStatus) {
         console.log(requestData);
 
-        $firstBtn.html('Search');
+        $firstBtn.html('Download');
         $firstBtn.removeAttr('disabled');
 
         var $firstForm = $('#first-form');
