@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Oshi Stealing App</title>
+    <!-- Strategy Template http://www.templatemo.com/tm-489-strategy -->
+
+    <!-- load stylesheets -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">  <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.min.css">                <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/fontello/css/warframe-codes.css">                        <!-- Fontello -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">                                      <!-- Bootstrap style -->
+    <link rel="stylesheet" href="css/hero-slider-style.css">                                  <!-- Hero slider style -->
+    <link rel="stylesheet" href="css/templatemo-style.css">                                   <!-- Templatemo style -->
+
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/css/bootstrap4-toggle.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet">
+
+    <style>
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            width: 40%;
+        }
+
+        @font-face
+        {
+            font-family: 'warframe';
+            src: url('./css/fontello/font/warframe.eot?85949734');
+            src: url('./css/fontello/font/warframe.eot?85949734#iefix') format('embedded-opentype'),
+            url('./css/fontello/font/warframe.woff?85949734') format('woff'),
+            url('./css/fontello/font/warframe.ttf?85949734') format('truetype'),
+            url('./css/fontello/font/warframe.svg?85949734#warframe') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .icon
+        {
+            font-family: "warframe";
+            font-style: normal;
+            font-weight: normal;
+            speak: none;
+
+            display: inline-block;
+            text-decoration: inherit;
+            width: 1em;
+            margin-right: .2em;
+            text-align: center;
+            /* opacity: .8; */
+
+            /* For safety - reset parent styles, that can break glyph codes*/
+            font-variant: normal;
+            text-transform: none;
+
+            /* fix buttons height, for twitter bootstrap */
+            line-height: 1em;
+
+            /* Animation center compensation - margins should be symmetric */
+            /* remove if not needed */
+            margin-left: .2em;
+
+            /* You can be more comfortable with increased icons size */
+            /* font-size: 120%; */
+
+            /* Font smoothing. That was taken from TWBS */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+
+            /* Uncomment for 3D effect */
+            /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+        }
+    </style>
+</head>
+
+<body>
+<section class="cd-hero">
+    <ul class="cd-hero-slider cd-oshi-slider autoplay">
+
+        <li class="selected">
+            <div class="cd-full-width">
+                <div class="tm-slide-content-div" style="margin-right: 50% !important;">
+                    <!--<i class="icon icon-fo-warframe tm-slide-icon"></i>-->
+                    <img src="img/oshi/icon.png" class="center">
+                    <h2 class="text-uppercase">Osho & Osha</h2>
+                    <p class="m-b-mid">Gif Stealing App</p>
+
+                    <form id="first-form">
+                        <div class="form-group">
+                            <input name="url" type="text" class="form-control center-block tm-max-w-400" id="url" placeholder="Type the Line URL..." required>
+                        </div>
+
+                        <button id="firstFormBtn" type="submit" class="cd-btn btnAnimated">Search</button>
+                    </form>
+
+                    <div class="alert alert-warning alertMessage" style="margin-top: 25px; display: none;" role="alert">
+                        This is a warning alert—check it out!
+                    </div>
+                </div>
+            </div> <!-- .cd-full-width -->
+        </li>
+    </ul> <!-- .cd-hero-slider -->
+</section> <!-- .cd-hero -->
+
+<!-- Contact section -->
+<section class="tm-bg-purple tm-section">
+    <div class="container-fluid tm-section-5-inner">
+        <div class="row">
+            <div class="col-xs-12 tm-text-white text-xs-center">
+                <h2 class="tm-section-3-title">Contact Me</h2>
+                <p class="tm-section-3-description">If you want to know more about this tool or you have any suggestion
+                    we are here to answer your questions. Write to us and we will get back to you as soon as possible</p>
+            </div>
+        </div>
+        <div class="row">
+            <form action="php/mail.php" method="post" class="tm-contact-form">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                    <div class="form-group">
+                        <input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="Name" required/>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="contact_email" name="contact_email" class="form-control" placeholder="Email" required/>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="contact_subject" name="contact_subject" class="form-control" placeholder="Subject" required/>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                    <div class="form-group">
+                        <textarea id="contact_message" name="contact_message" class="form-control" rows="6" placeholder="Your message" required></textarea>
+                    </div>
+                </div>
+
+                <div class="col-xs-12">
+                    <button type="submit" class="cd-btn pull-xs-right">Send it</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 text-xs-center">
+                <div class="tm-social-icons-container">
+                    <a href="#" class="tm-social-icon-link"><i class="fa fa-facebook tm-social-icon"></i></a>
+                    <a href="#" class="tm-social-icon-link"><i class="fa fa-google-plus tm-social-icon"></i></a>
+                    <a href="#" class="tm-social-icon-link"><i class="fa fa-twitter tm-social-icon"></i></a>
+                    <a href="#" class="tm-social-icon-link"><i class="fa fa-behance tm-social-icon"></i></a>
+                    <a href="#" class="tm-social-icon-link"><i class="fa fa-linkedin tm-social-icon"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <footer class="col-xs-12 text-xs-center">
+                <p class="tm-text-white tm-copyright-text">Copyright &copy; 2019, Ing Daniel Pérez
+
+                    | Designed by <a rel="nofollow" href="http://www.google.com/+templatemo" target="_parent">Templatemo</a></p>
+            </footer>
+        </div>
+    </div>
+</section>
+
+<!-- load JS files -->
+<script src="js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
+<script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js"></script> <!-- Tether for Bootstrap (http://stackoverflow.com/questions/34567939/how-to-fix-the-error-error-bootstrap-tooltips-require-tether-http-github-h) -->
+<script src="js/bootstrap.min.js"></script>                 <!-- Bootstrap js (v4-alpha.getbootstrap.com/) -->
+<script src="js/hero-slider-script.js"></script>            <!-- Hero slider (https://codyhouse.co/gem/hero-slider/) -->
+<script src="js/jquery.touchSwipe.min.js"></script>         <!-- http://labs.rampinteractive.co.uk/touchSwipe/demos/ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/js/bootstrap4-toggle.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script>
+    $(document).ready(function(){
+
+        /* Auto play bootstrap carousel
+        * http://stackoverflow.com/questions/13525258/twitter-bootstrap-carousel-autoplay-on-load
+        -----------------------------------------------------------------------------------------*/
+        $('.carousel').carousel({
+            interval: 3000
+        });
+
+        /* Enable swiping carousel for tablets and mobile
+         * http://lazcreative.com/blog/adding-swipe-support-to-bootstrap-carousel-3-0/
+         ---------------------------------------------------------------------------------*/
+        if($(window).width() <= 991) {
+            $(".carousel-inner").swipe( {
+                //Generic swipe handler for all directions
+                swipeLeft:function(event, direction, distance, duration, fingerCount) {
+                    $(this).parent().carousel('next');
+                },
+                swipeRight: function() {
+                    $(this).parent().carousel('prev');
+                },
+                //Default is 75px, set to 0 for demo so any distance triggers swipe
+                threshold:0
+            });
+        }
+
+        /* Handle window resize */
+        $(window).resize(function(){
+            if($(window).width() <= 991) {
+                $(".carousel-inner").swipe( {
+                    //Generic swipe handler for all directions
+                    swipeLeft:function(event, direction, distance, duration, fingerCount) {
+                        $(this).parent().carousel('next');
+                    },
+                    swipeRight: function() {
+                        $(this).parent().carousel('prev');
+                    },
+                    //Default is 75px, set to 0 for demo so any distance triggers swipe
+                    threshold:0
+                });
+            }
+        });
+    });
+</script>
+
+<script type="application/javascript" src="js/app.js"></script>
+<script type="application/javascript" src="js/oshiDownload.js"></script>
+
+</body>
+</html>

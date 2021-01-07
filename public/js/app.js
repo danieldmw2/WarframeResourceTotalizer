@@ -7,6 +7,9 @@ appController = {
     getResourcesInfo : function(requestData, callback) {
         appController.doAjaxCall("http://" + server + "/" + area + "/webScrap.php", "POST", callback, requestData);
     },
+    getOshiInfo : function(requestData, callback) {
+        appController.doAjaxCall("http://" + server + "/" + area + "/webScrapOshi.php", "POST", callback, requestData);
+    },
     /*LOGIN*/
     paramTest : function(requestData, callback) {
         appController.doAjaxCall("http://" + server + "/" + area + + "/paramTest.php", "POST", callback, requestData);

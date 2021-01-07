@@ -7,8 +7,8 @@ http://www.templatemo.com/tm-489-strategy
 */
 
 ul { padding: 0; margin: 0;}
-.cd-hero-slider li { 
-	list-style: none; 
+.cd-hero-slider li {
+	list-style: none;
     background-color: #2c343b;
 
 }
@@ -48,20 +48,24 @@ a:focus {
 .cd-hero-slider li:nth-of-type(2) {	background-image: url('../img/top-bg-2.jpg'); }
 .cd-hero-slider li:nth-of-type(3) {	background-image: url('../img/top-bg-3.jpg'); }
 
+.cd-oshi-slider li:first-of-type { background-image: url('../img/oshi/top-bg-1.jpg') !important; }
+.cd-oshi-slider li:nth-of-type(2) {	background-image: url('../img/oshi/top-bg-2.jpg') !important; }
+.cd-oshi-slider li:nth-of-type(3) {	background-image: url('../img/oshi/top-bg-3.jpg') !important; }
+
 .cd-slider-nav { background-color: transparent; }
 
 .tm-slide-content-div {
 	background-color: rgba(255,255,255,0.8);
-	border-radius: 20px;	
+	border-radius: 20px;
 	margin-left: 2%;
     margin-right: 2%;
     margin-top: -10px;
     max-width: 600px;
     padding: 4%;
-    width: 100%;  
+    width: 100%;
 }
 
-.cd-hero-slider h2, 
+.cd-hero-slider h2,
 .cd-hero-slider p {
 	color: black;
 	font-weight: 300;
@@ -72,8 +76,8 @@ a:focus {
 .cd-hero-slider .form-control { border-radius: 6px; }
 .cd-btn { border-radius: 10px; }
 
-.cd-hero-slider .cd-btn { 
-	font-size: 1rem; 
+.cd-hero-slider .cd-btn {
+	font-size: 1rem;
 	padding: 0.5em 1.5em;
 }
 
@@ -97,8 +101,8 @@ a:focus {
 
 .cd-hero-slider h2 { font-size: 1.6em; }
 
-.cd-hero-slider p { 
-	width: 100%;	
+.cd-hero-slider p {
+	width: 100%;
 	max-width: none;
 }
 
@@ -107,16 +111,16 @@ a:focus {
 
 .cd-hero-slider .form-control {	padding: 0.5rem 0.6rem; }
 
-.tm-slide-icon { 
+.tm-slide-icon {
 	font-size: 4rem;
-	margin-bottom: 1rem; 
+	margin-bottom: 1rem;
 }
 
-.form-control { 
+.form-control {
 	border: 1px solid #6A6A6A;
 	border-radius: 10px;
 	font-size: 1.3rem;
-	padding: 0.9rem; 
+	padding: 0.9rem;
 }
 
 .tm-max-w-400 { max-width: 400px; }
@@ -126,26 +130,26 @@ a:focus {
 }
 
 .form-control:-moz-placeholder { /* Firefox 18- */
-   color: #000000;  
+   color: #000000;
 }
 
 .form-control::-moz-placeholder {  /* Firefox 19+ */
-   color: #000000;  
+   color: #000000;
 }
 
-.form-control:-ms-input-placeholder {  
-   color: #000000;  
+.form-control:-ms-input-placeholder {
+   color: #000000;
 }
 
 .cd-hero-slider p.m-b-mid { margin-bottom: 15px; }
 
 .cd-slider-nav { height: 40px; }
 
-.cd-slider-nav li, 
+.cd-slider-nav li,
 .cd-slider-nav .cd-marker { width: 40px; }
 
-.cd-slider-nav .cd-marker { 
-	background-color: transparent; 
+.cd-slider-nav .cd-marker {
+	background-color: transparent;
 	color: transparent;
 }
 
@@ -156,7 +160,7 @@ a:focus {
     margin: 1px;
     text-indent: -999px;
     cursor: pointer;
-    background-color: rgba(255,255,255,0.5);    
+    background-color: rgba(255,255,255,0.5);
     border-radius: 10px;
     padding-top: 0;
 }
@@ -165,20 +169,20 @@ a:focus {
 
 .tm-section-2 {	max-width: 1050px; }
 .tm-section-3-inner { max-width: 1250px; }
-.tm-section-5-inner { 
+.tm-section-5-inner {
 	padding: 80px 5%;
-	max-width: 1000px; 
+	max-width: 1000px;
 }
 
 .tm-section-2 { padding: 60px 5% 40px; }
 .tm-section-3 {	padding: 60px 5% 20px; }
 
-.tm-section-4 { 
-	padding: 60px 5% 90px; 
+.tm-section-4 {
+	padding: 60px 5% 90px;
 	max-width: 900px;
 }
 
-.tm-media-img { 
+.tm-media-img {
 	padding: 0.5rem;
 	box-shadow: 0px 0px 4px 2px rgba(197, 197, 197, 0.5);
 	display: block;
@@ -204,7 +208,7 @@ a:focus {
 	-webkit-justify-content: center;
 	    -ms-flex-pack: center;
 	        justify-content: center;
-	margin-bottom: 30px;	
+	margin-bottom: 30px;
 }
 
 .tm-media-row:last-child { margin-bottom: 0; }
@@ -219,12 +223,12 @@ a:focus {
 .tm-text-white, .tm-text-white a { color: #ffffff; }
 
 .tm-section-3-header { max-width: 620px; }
-.tm-section-3-title { 
+.tm-section-3-title {
 	font-weight: 300;
-	margin-bottom: 2rem; 
+	margin-bottom: 2rem;
 }
-.tm-section-3-description { 
-	line-height: 1.8; 
+.tm-section-3-description {
+	line-height: 1.8;
 	margin-bottom: 4rem;
 }
 
@@ -257,7 +261,7 @@ a:focus {
 	padding: 0.9rem;
 }
 
-.tm-plan { 		
+.tm-plan {
 	width: 100%;
 	margin-bottom: 40px;
 }
@@ -291,8 +295,8 @@ a:focus {
 	background-color: #BFAF92;
 }
 
-.carousel-indicators li { 
-	background-color: rgb(158,158,158); 
+.carousel-indicators li {
+	background-color: rgb(158,158,158);
 	margin: 0;
 }
 
@@ -311,7 +315,7 @@ a:focus {
 	margin-bottom: 50px;
 }
 
-.tm-social-icon-link {	    
+.tm-social-icon-link {
     background: #60608A;
     color: white;
     width: 45px;
@@ -344,7 +348,7 @@ a:focus {
 @media only screen and (min-width: 400px) {
 
 	.cd-hero-slider { height: 568px; }
-	.cd-hero-slider h2, 
+	.cd-hero-slider h2,
 	.cd-hero-slider p {
 		font-weight: 400;
 		margin-bottom: 14px;
@@ -364,23 +368,23 @@ a:focus {
 	.cd-hero-slider .cd-btn,
 	.cd-hero-slider .form-control { border-radius: 10px; }
 
-	.tm-slide-icon { 
-		font-size: 6rem; 
+	.tm-slide-icon {
+		font-size: 6rem;
 		margin-bottom: 2rem;
 	}
-	.cd-hero-slider .form-control { 
-		font-size: 1.3rem; 
+	.cd-hero-slider .form-control {
+		font-size: 1.3rem;
 		padding: 0.9rem;
 	}
 }
 
 @media only screen and (min-width: 544px) {
-	
+
 	.tm-slide-content-div { margin-top: 0; }
 	.tm-media-row {	-webkit-flex-direction: row;	-ms-flex-direction: row;	flex-direction: row; }
 	.tm-flex-child-2 { -webkit-order: 2; -ms-flex-order: 2; order: 2; }
 	.tm-flex-child-1 { -webkit-order: 1; -ms-flex-order: 1; order: 1; }
-	.tm-social-icon-link { margin-right: 15px; }		
+	.tm-social-icon-link { margin-right: 15px; }
 }
 
 @media only screen and (min-width: 768px) {
@@ -391,8 +395,8 @@ a:focus {
 	.tm-slide-content-div { padding: 5%; }
 	.cd-hero-slider p.m-b-mid { margin-bottom: 40px; }
 	.tm-media-text-container { padding-left: 50px; }
-	.tm-media-text-container-left { 
-		padding-left: 0; 
+	.tm-media-text-container-left {
+		padding-left: 0;
 		padding-right: 50px;
 	}
 	.tm-plan { margin-bottom: 0; }
@@ -402,7 +406,7 @@ a:focus {
 
 @media only screen and (min-width: 992px) {
 	.cd-hero-slider { height: 700px; }
-	.cd-hero-slider p.m-b-mid { margin-bottom: 60px; }		
+	.cd-hero-slider p.m-b-mid { margin-bottom: 60px; }
 }
 
 @media only screen and (min-width: 1170px) {
