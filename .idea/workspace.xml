@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="615c6e2f-2419-4403-ab24-b901719403db" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/AR_Website.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AR_Website.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/php/webScrapOshi.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/php/webScrapOshi.php" afterDir="false" />
     </list>
@@ -344,6 +346,10 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
+    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner scope="XML" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -365,7 +371,8 @@
       <workItem from="1551128677984" duration="2830000" />
       <workItem from="1554575632314" duration="11391000" />
       <workItem from="1609983956949" duration="2308000" />
-      <workItem from="1609987854557" duration="13223000" />
+      <workItem from="1609987854557" duration="14880000" />
+      <workItem from="1613007079627" duration="510000" />
     </task>
     <servers />
   </component>

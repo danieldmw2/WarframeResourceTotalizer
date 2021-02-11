@@ -47,6 +47,7 @@ try {
 
         $linkname = $title->plaintext . '_' . $i;
         $linkname = str_replace(" ", "", $linkname);
+        $linkname = str_replace("&", "", $linkname);
 
         if($host == 'DESKTOP-EEV9QVH') {
             file_put_contents($linkname . ".png", fopen($link, 'r'));
